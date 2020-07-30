@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  school: MyString
+  complete: false
+  level: MyString
+  description: MyText
+  image: MyString
+
+two:
+  school: MyString
+  complete: false
+  level: MyString
+  description: MyText
+  image: MyString
