@@ -11,9 +11,11 @@ class CategoriesController < ApplicationController
 
   def new
     @category = @course.categories.new
+    render partial: "form"
   end
 
   def edit
+    render partial: "form"
   end
 
   def create

@@ -1,5 +1,6 @@
 class EducationsController < ApplicationController
   before_action :set_education, only: [:show, :update, :edit, :destroy]
+
   def index
     @educations = Education.all
   end
@@ -9,9 +10,11 @@ class EducationsController < ApplicationController
 
   def new
     @education = Education.new
+    render partial: "form"
   end
 
   def edit
+    render partial: "form"
   end
 
   def create

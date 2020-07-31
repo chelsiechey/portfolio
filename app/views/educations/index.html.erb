@@ -1,5 +1,10 @@
-<h1>Educations#index</h1>
+<h1>Education</h1>
+<%= link_to 'Add Education', new_education_path %>
+<ul>
+    <% @educations.each do |edu| %>
+        <li>Name: <%= link_to edu.school, edu %>, Complete: <%= edu.complete %>, Description: <%= edu.description %>, Image Link: <%= edu.image %></li>
+    <% end %>
+</ul>
+
+
 <p>Find me in app/views/educations/index.html.erb</p>
-<% @educations.each do |edu| %>
-    <li><%= link_to edu.school, edu %></li>
-<% end %>

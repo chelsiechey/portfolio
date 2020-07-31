@@ -1,7 +1,12 @@
-<h1>Educations#show</h1>
+<h1>Education Edit Page</h1>
 <p>Find me in app/views/educations/show.html.erb</p>
+<p><%= @education.complete %></p>
+<%= link_to 'Edit', edit_education_path(@education) %>
+<%= link_to 'Delete', @education, method: :delete %>
+
 <ul>
     <% @education.courses.each do |c| %>
         <li><%= link_to c.name, c %></li>
     <% end %>
 </ul>
+<%= link_to "Add Course", new_education_course_path(@education) %>

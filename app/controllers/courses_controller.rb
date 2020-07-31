@@ -10,9 +10,11 @@ class CoursesController < ApplicationController
 
   def new
     @course = @education.courses.new
+    render partial: "form"
   end
 
   def edit
+    render partial: "form"
   end
 
   def create

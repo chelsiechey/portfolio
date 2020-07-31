@@ -1,0 +1,15 @@
+<h1><%= @education.id ? 'Edit Education' : 'Add Education' %></h1>
+<br />
+<%= form_for @education do |e| %>
+    <%= e.label :school %>
+    <%= e.text_field :school, required: true, autofocus: true %>
+    <%= e.label :complete, "Complete?" %>
+    <%= e.check_box :complete, {}, true, false %>
+    <%= e.label :level %>
+    <%= e.text_field :level, autofocus: true %>
+    <%= e.label :description %>
+    <%= e.text_area :description, autofocus: true %>
+    <%= e.label :image %>
+    <%= e.text_field :image, autofocus: true %>
+    <%= e.submit %>
+<% end %>
