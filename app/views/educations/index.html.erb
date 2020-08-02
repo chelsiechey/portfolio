@@ -1,10 +1,16 @@
 <h1>Education</h1>
-<%= link_to 'Add Education', new_education_path %>
+
 <ul>
     <% @educations.each do |edu| %>
-        <li>Name: <%= link_to edu.school, edu %>, Complete: <%= edu.complete %>, Description: <%= edu.description %>, Image Link: <%= edu.image %></li>
+        <li><%= link_to edu.school, edu %></li> 
+        <li>Degree Type: <%= edu.level %></li>
+        <li>Complete: <%= edu.complete %></li>
+        <li>Description: <%= edu.description %></li> 
+        <li>Image Link: <%= edu.image %></li>
+        <br />
     <% end %>
 </ul>
 
+<%= link_to 'Add Education', new_education_path %>
 
-<p>Find me in app/views/educations/index.html.erb</p>
+

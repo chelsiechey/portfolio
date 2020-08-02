@@ -22,7 +22,7 @@ class CategoriesController < ApplicationController
     @category = @course.categories.new(category_params)
 
     if @category.save
-      redirect_to [@course, @category]
+      redirect_to course_category_path(@course, @category)
     else
       render :new
     end
@@ -30,7 +30,7 @@ class CategoriesController < ApplicationController
 
   def update
     if @category.update(category_params)
-      redirect_to [@course, @category]
+      redirect_to course_category_path(@course, @category)
     else
       render :edit
     end
@@ -38,10 +38,11 @@ class CategoriesController < ApplicationController
 
   def destroy
     @category.destroy
-    redirect_to course_categories_path
+    redirect_to course_categories_path(@course)
   end
 
   private 
+
     def set_course
       @course = Course.find(params[:course_id])
     end

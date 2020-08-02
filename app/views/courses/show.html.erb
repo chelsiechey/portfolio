@@ -1,2 +1,13 @@
-<h1>Courses#show</h1>
-<p>Find me in app/views/courses/show.html.erb</p>
+<h1><%= @course.name %></h1>
+<p>Complete: <%= @course.complete %></p>
+<p>Description: <%= @course.description %></p>
+<p>Image: <%= @course.image %></p>
+<br />
+<%= link_to 'Edit', edit_course_path(@course) %>
+<br /><br />
+<%= link_to 'Delete', @course, method: :delete %>
+<br /><br />
+<%= link_to 'View Categories', course_categories_path(@course) %>
+<br /><br />
+<%= link_to 'Back', education_courses_path(@course.education) %>
+
