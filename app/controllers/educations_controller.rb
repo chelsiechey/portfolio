@@ -1,8 +1,8 @@
 class EducationsController < ApplicationController
   before_action :set_education, only: [:show, :update, :edit, :destroy]
+  before_action :set_index, only: [:index, :math, :computer_science]
 
   def index
-    @educations = Education.all
   end
 
   def show
@@ -40,13 +40,23 @@ class EducationsController < ApplicationController
     redirect_to educations_path
   end
 
+  def math
+  end
+
+  def computer_science
+  end
+
   private
+
+    def set_index
+      @educations = Education.all
+    end
 
     def set_education
       @education = Education.find(params[:id])
     end
 
     def education_params
-      params.require(:education).permit(:school, :complete, :level, :description, :image)
+      params.require(:education).permit(:school, :complete, :level, :description, :image, :start_date, :end_date)
     end
 end

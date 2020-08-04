@@ -1,0 +1,19 @@
+<h1><%= @project.id ? 'Edit Project' : 'Add Project' %></h1>
+<br />
+<%= form_for @project do |p| %>
+    <%= p.label :name %>
+    <%= p.text_field :name, required: true, autofocus: true %>
+    <%= p.label :date_completed %>
+    <%= p.date_field :date_completed %>
+    <%= p.label :link %>
+    <%= p.text_field :link %>
+    <%= p.label :description %>
+    <%= p.text_area :description %>
+    <%= p.label :language %>
+    <%= p.text_field :language %>
+    <%= p.label :image %>
+    <%= p.text_field :image %>
+    <%= p.submit %>
+    <%= p.label :featured, "Featured?" %>
+    <%= p.check_box :featured %>
+<% end %>

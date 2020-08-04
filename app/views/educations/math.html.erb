@@ -1,0 +1,12 @@
+<h1>Math Courses</h1>
+<ul>
+    <% @educations.each do |e| %>
+        <% e.courses.each do |c| %>
+            <% c.categories.each do |k| %>
+                <% if k.name == 'Math' %>
+                    <li><%= k.course.name %></li>
+                <% end %>
+            <% end %>
+        <% end %>
+    <% end %>
+</ul>

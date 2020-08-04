@@ -2,6 +2,6 @@
 <br />
 <%= form_for [@course, @category] do |c| %>
     <%= c.label :name %>
-    <%= c.text_field :name, required: true, autofocus: true %>
+    <%= c.select :name, ['Math', 'Computer Science'], autofocus: true %>
     <%= c.submit %>
 <% end %>

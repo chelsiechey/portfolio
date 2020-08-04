@@ -3,13 +3,17 @@
 <%= form_for @education do |e| %>
     <%= e.label :school %>
     <%= e.text_field :school, required: true, autofocus: true %>
+    <%= e.label :start_date %>
+    <%= e.date_field :start_date %>
+    <%= e.label :end_date %>
+    <%= e.date_field :end_date %>
     <%= e.label :complete, "Complete?" %>
     <%= e.check_box :complete %>
     <%= e.label :level %>
-    <%= e.text_field :level, autofocus: true %>
+    <%= e.text_field :level %>
     <%= e.label :description %>
-    <%= e.text_area :description, autofocus: true %>
+    <%= e.text_area :description %>
     <%= e.label :image %>
-    <%= e.text_field :image, autofocus: true %>
+    <%= e.text_field :image %>
     <%= e.submit %>
 <% end %>

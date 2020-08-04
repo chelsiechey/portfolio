@@ -1,0 +1,13 @@
+<h1><%= @project.name %></h1>
+<p>Date Completed: <%= @project.date_completed %></p>
+<p>Link: <%= @project.link %></p>
+<p>Description: <%= @project.description %></p>
+<p>Language: <%= @project.language %></p>
+<p>Image: <%= @project.image %></p>
+<p>Featured? <%= @project.featured %></p>
+<br />
+<%= link_to 'Edit', edit_project_path(@project) %>
+<br /><br />
+<%= link_to 'Delete', @project, method: :delete %>
+<br /><br />
+<%= link_to 'Back', '/projects' %>
