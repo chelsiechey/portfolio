@@ -1,16 +1,19 @@
 <h1>Education</h1>
 
-<ul>
-    <% @educations.each do |edu| %>
-        <li><%= link_to edu.school, edu %></li> 
-        <li>Degree Type: <%= edu.level %></li>
-        <li>Complete: <%= edu.complete %></li>
-        <li>Description: <%= edu.description %></li> 
-        <li>Image Link: <%= edu.image %></li>
-        <br />
-    <% end %>
-</ul>
-
+<% @educations.each do |edu| %>
+    <div class="row">
+        <div>
+            <div class="card deep-purple lighten-4">
+                <div class="card-content">
+                    <span class="card-title"><%= edu.school %></span>
+                    <p><%= edu.description %></p>
+                </div>
+                <div class="card-action">
+                    <a><%= link_to "Courses", edu %></a>
+                </div>
+            </div<
+        </div>
+    </div>
+<% end %>
 <%= link_to 'Add Education', new_education_path %>
-
 
