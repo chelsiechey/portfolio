@@ -1,7 +1,25 @@
 <h1>Projects</h1>
-<ul>
+<div class="black-links">
+
+<div class="row">
     <% @projects.each do |p| %>
-        <li><%= link_to p.name, p %></li>
-    <% end %>
-</ul>
+        <div class="col s12">
+            <div class="card project-card">
+                <div class="card-content">
+                    <span class="card-title"><%= link_to p.name, p %></span>
+                    <p><%= p.description %></p>
+                    <br />
+                    <p><%= p.language %></p>
+                </div>
+                <div class="card-action">
+                    <a href="http://www.google.com" target="_blank" class="black-text"><image src="/assets/github.svg" alt="github"></a>
+                </div>
+            </div>
+        </div>
+    <% end %>  
+</div>
+        
+
+
 <%= link_to 'Add Project', new_project_path %>
+</div>

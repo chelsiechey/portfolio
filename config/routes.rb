@@ -17,6 +17,6 @@ Rails.application.routes.draw do
   end
 
   resources :projects
-  get "/pages/:page" => "pages#show"
+  get ":page" => "pages#show"
 end
 

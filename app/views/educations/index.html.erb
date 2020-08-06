@@ -1,19 +1,21 @@
 <h1>Education</h1>
-
-<% @educations.each do |edu| %>
-    <div class="row">
-        <div>
-            <div class="card deep-purple lighten-4">
-                <div class="card-content">
-                    <span class="card-title"><%= edu.school %></span>
-                    <p><%= edu.description %></p>
+    <div class="black-links">
+        <div class="row">
+            <% @educations.each do |edu| %>
+                <div class="col s12">
+                    <div class="card project-card">
+                        <div class="card-content">
+                            <span class="card-title"><%= link_to edu.school, edu %></span>
+                            <p><%= edu.description %></p>
+                            <br />
+                        </div>
+                        <div class="card-action">
+                            <a href="http://www.google.com" target="_blank" class="black-text"><image src="/assets/github.svg" alt="github"></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-action">
-                    <a><%= link_to "Courses", edu %></a>
-                </div>
-            </div<
+            <% end %>
         </div>
-    </div>
-<% end %>
-<%= link_to 'Add Education', new_education_path %>
 
+    <%= link_to 'Add Education', new_education_path %>
+    </div>

@@ -22,9 +22,17 @@ $link-color: color("light-blue", "darken-1") !default;
     color: black;
 }
 
+.active {
+    background-color: $primary-color-light;
+}
+
 .nav-wrapper ul li a:hover {
     background-color: white;
     color: $primary-color;
+    &.active {
+        background-color: $primary-color-light;
+        color: black;
+    }
 }
 
 .contact-button {
@@ -33,4 +41,8 @@ $link-color: color("light-blue", "darken-1") !default;
         background-color: white;
         color: $primary-color;
     }
+}
+
+.black-links a {
+    color: black;
 }

@@ -3,12 +3,14 @@
     <div class="nav-wrapper white">
         <a href="/pages/home" class="bradn-logo left"><image src="/assets/temporary-logo.png" class="logo responsive-img" alt="logo"></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="/about">WHO AM I?</a></li>
-            <li><a href="/projects">PRJOECTS</a></li>
-            <li><a href="/educations">EDUCATION</a></li>
-            <li><a href="/blog">BLOG</a></li>
+            <li><%= link_to "WHO AM I?", '/about', :class => current_class?('/about')  %></li>
+            <li><%= link_to "PROJECTS", '/projects', :class => current_class?('/projects')  %></li>
+            <li><%= link_to "EDUCATION", '/educations', :class => current_class?('/educations')  %></li>
+            <li><%= link_to "BLOG", '/blog', :class => current_class?('/blog')  %></li>
             <li><a href="/contact" class="waves-effect waves-light btn-small contact-button">CONTACT ME</a></li>
         </ul>
     </div>
 </nav>
 </div>
+
+
