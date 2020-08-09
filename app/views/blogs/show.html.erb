@@ -1,0 +1,14 @@
+<h1><%= @blog.title %></h1>
+<ul>
+    <li>Content: <%= @blog.content %></li>
+    <li>Date: <%= @blog.completion_date %></li>
+    <li>Photo: <%= @blog.photo %></li>
+    <li>Link: <%= @blog.link %></li>
+    <li>Caption: <%= @blog.caption %></li>
+</ul>
+
+<%= link_to 'Edit', edit_blog_path(@blog) %>
+<br /><br />
+<%= link_to 'Delete', @blog, method: :delete %>
+<br /><br />
+<%= link_to 'Back', '/blogs' %>

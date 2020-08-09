@@ -1,0 +1,17 @@
+<h1><%= @blog.id ? 'Edit Blog Post' : 'Add Blog Post' %></h1>
+<br />
+<%= form_for @blog do |b| %>
+    <%= b.label :title %>
+    <%= b.text_field :title, required: true, autofocus: true %>
+    <%= b.label :content %>
+    <%= b.text_area :content %>
+    <%= b.label :completion_date %>
+    <%= b.date_field :completion_date %>
+    <%= b.label :photo %>
+    <%= b.text_field :photo %>
+    <%= b.label :link %>
+    <%= b.text_field :link %>
+    <%= b.label :caption %>
+    <%= b.text_field :caption %>
+    <%= b.submit %>
+<% end %>

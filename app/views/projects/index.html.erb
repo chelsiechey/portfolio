@@ -6,7 +6,11 @@
         <div class="col s12">
             <div class="card project-card">
                 <div class="card-content">
-                    <span class="card-title"><%= link_to p.name, p %></span>
+                    <% if admin_signed_in? %>
+                        <span class="card-title"><%= link_to p.name, p %></span>
+                    <% else %>
+                        <span class="card-title"><%= p.name %></span>
+                    <% end %>
                     <p><%= p.description %></p>
                     <br />
                     <p><%= p.language %></p>
@@ -19,7 +23,7 @@
     <% end %>  
 </div>
         
-
-
-<%= link_to 'Add Project', new_project_path %>
+<% if admin_signed_in? %>
+    <%= link_to 'Add Project', new_project_path %>
+<% end %>
 </div>
